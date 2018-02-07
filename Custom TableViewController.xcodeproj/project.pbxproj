@@ -9,10 +9,23 @@
 /* Begin PBXBuildFile section */
 		4A946166202AB019008BAA5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946165202AB019008BAA5E /* main.m */; };
 		4A946169202AB019008BAA5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946168202AB019008BAA5E /* AppDelegate.m */; };
-		4A94616C202AB019008BAA5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A94616B202AB019008BAA5E /* ViewController.m */; };
 		4A94616F202AB019008BAA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A94616D202AB019008BAA5E /* Main.storyboard */; };
 		4A946171202AB019008BAA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A946170202AB019008BAA5E /* Assets.xcassets */; };
 		4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A946172202AB019008BAA5E /* LaunchScreen.storyboard */; };
+		4A946187202AB094008BAA5E /* Coffee 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A94617D202AB094008BAA5E /* Coffee 1.jpg */; };
+		4A946188202AB094008BAA5E /* Coffee 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A94617E202AB094008BAA5E /* Coffee 2.jpg */; };
+		4A946189202AB094008BAA5E /* Coffee 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A94617F202AB094008BAA5E /* Coffee 3.jpg */; };
+		4A94618A202AB094008BAA5E /* Coffee 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946180202AB094008BAA5E /* Coffee 4.jpg */; };
+		4A94618B202AB094008BAA5E /* mik 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946181202AB094008BAA5E /* mik 2.jpg */; };
+		4A94618C202AB094008BAA5E /* milk 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946182202AB094008BAA5E /* milk 1.jpg */; };
+		4A94618D202AB094008BAA5E /* milk 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946183202AB094008BAA5E /* milk 3.jpg */; };
+		4A94618E202AB094008BAA5E /* tea 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946184202AB094008BAA5E /* tea 1.jpg */; };
+		4A94618F202AB094008BAA5E /* tea 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946185202AB094008BAA5E /* tea 2.jpg */; };
+		4A946190202AB094008BAA5E /* tea 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946186202AB094008BAA5E /* tea 3.jpg */; };
+		4A946197202AB0CA008BAA5E /* myData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946192202AB0CA008BAA5E /* myData.m */; };
+		4A946198202AB0CA008BAA5E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946194202AB0CA008BAA5E /* TableViewController.m */; };
+		4A946199202AB0CA008BAA5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946196202AB0CA008BAA5E /* ViewController.m */; };
+		4A94619C202AB100008BAA5E /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A94619B202AB100008BAA5E /* Cell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +33,28 @@
 		4A946165202AB019008BAA5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A946167202AB019008BAA5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A946168202AB019008BAA5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4A94616A202AB019008BAA5E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A94616B202AB019008BAA5E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4A94616E202AB019008BAA5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A946170202AB019008BAA5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A946173202AB019008BAA5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A946175202AB019008BAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A94617D202AB094008BAA5E /* Coffee 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 1.jpg"; sourceTree = "<group>"; };
+		4A94617E202AB094008BAA5E /* Coffee 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 2.jpg"; sourceTree = "<group>"; };
+		4A94617F202AB094008BAA5E /* Coffee 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 3.jpg"; sourceTree = "<group>"; };
+		4A946180202AB094008BAA5E /* Coffee 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 4.jpg"; sourceTree = "<group>"; };
+		4A946181202AB094008BAA5E /* mik 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mik 2.jpg"; sourceTree = "<group>"; };
+		4A946182202AB094008BAA5E /* milk 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "milk 1.jpg"; sourceTree = "<group>"; };
+		4A946183202AB094008BAA5E /* milk 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "milk 3.jpg"; sourceTree = "<group>"; };
+		4A946184202AB094008BAA5E /* tea 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tea 1.jpg"; sourceTree = "<group>"; };
+		4A946185202AB094008BAA5E /* tea 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tea 2.jpg"; sourceTree = "<group>"; };
+		4A946186202AB094008BAA5E /* tea 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tea 3.jpg"; sourceTree = "<group>"; };
+		4A946191202AB0CA008BAA5E /* myData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myData.h; sourceTree = "<group>"; };
+		4A946192202AB0CA008BAA5E /* myData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myData.m; sourceTree = "<group>"; };
+		4A946193202AB0CA008BAA5E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		4A946194202AB0CA008BAA5E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		4A946195202AB0CA008BAA5E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4A946196202AB0CA008BAA5E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A94619A202AB100008BAA5E /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		4A94619B202AB100008BAA5E /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +87,12 @@
 		4A946163202AB019008BAA5E /* Custom TableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4A946167202AB019008BAA5E /* AppDelegate.h */,
-				4A946168202AB019008BAA5E /* AppDelegate.m */,
-				4A94616A202AB019008BAA5E /* ViewController.h */,
-				4A94616B202AB019008BAA5E /* ViewController.m */,
-				4A94616D202AB019008BAA5E /* Main.storyboard */,
-				4A946170202AB019008BAA5E /* Assets.xcassets */,
-				4A946172202AB019008BAA5E /* LaunchScreen.storyboard */,
-				4A946175202AB019008BAA5E /* Info.plist */,
+				4A94619D202AB171008BAA5E /* iCore */,
+				4A9461A0202AB1D2008BAA5E /* Model */,
+				4A94619F202AB19A008BAA5E /* Table_Cell */,
+				4A946195202AB0CA008BAA5E /* ViewController.h */,
+				4A946196202AB0CA008BAA5E /* ViewController.m */,
+				4A94617C202AB087008BAA5E /* img */,
 				4A946164202AB019008BAA5E /* Supporting Files */,
 			);
 			path = "Custom TableViewController";
@@ -74,9 +101,59 @@
 		4A946164202AB019008BAA5E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A94616D202AB019008BAA5E /* Main.storyboard */,
+				4A946170202AB019008BAA5E /* Assets.xcassets */,
+				4A946172202AB019008BAA5E /* LaunchScreen.storyboard */,
+				4A946175202AB019008BAA5E /* Info.plist */,
 				4A946165202AB019008BAA5E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A94617C202AB087008BAA5E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				4A94617D202AB094008BAA5E /* Coffee 1.jpg */,
+				4A94617E202AB094008BAA5E /* Coffee 2.jpg */,
+				4A94617F202AB094008BAA5E /* Coffee 3.jpg */,
+				4A946180202AB094008BAA5E /* Coffee 4.jpg */,
+				4A946181202AB094008BAA5E /* mik 2.jpg */,
+				4A946182202AB094008BAA5E /* milk 1.jpg */,
+				4A946183202AB094008BAA5E /* milk 3.jpg */,
+				4A946184202AB094008BAA5E /* tea 1.jpg */,
+				4A946185202AB094008BAA5E /* tea 2.jpg */,
+				4A946186202AB094008BAA5E /* tea 3.jpg */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		4A94619D202AB171008BAA5E /* iCore */ = {
+			isa = PBXGroup;
+			children = (
+				4A946167202AB019008BAA5E /* AppDelegate.h */,
+				4A946168202AB019008BAA5E /* AppDelegate.m */,
+			);
+			name = iCore;
+			sourceTree = "<group>";
+		};
+		4A94619F202AB19A008BAA5E /* Table_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A946194202AB0CA008BAA5E /* TableViewController.m */,
+				4A946193202AB0CA008BAA5E /* TableViewController.h */,
+				4A94619A202AB100008BAA5E /* Cell.h */,
+				4A94619B202AB100008BAA5E /* Cell.m */,
+			);
+			name = Table_Cell;
+			sourceTree = "<group>";
+		};
+		4A9461A0202AB1D2008BAA5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A946191202AB0CA008BAA5E /* myData.h */,
+				4A946192202AB0CA008BAA5E /* myData.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +215,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A946187202AB094008BAA5E /* Coffee 1.jpg in Resources */,
 				4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */,
+				4A946189202AB094008BAA5E /* Coffee 3.jpg in Resources */,
+				4A94618B202AB094008BAA5E /* mik 2.jpg in Resources */,
+				4A946190202AB094008BAA5E /* tea 3.jpg in Resources */,
+				4A94618A202AB094008BAA5E /* Coffee 4.jpg in Resources */,
+				4A94618E202AB094008BAA5E /* tea 1.jpg in Resources */,
+				4A94618D202AB094008BAA5E /* milk 3.jpg in Resources */,
 				4A946171202AB019008BAA5E /* Assets.xcassets in Resources */,
+				4A94618F202AB094008BAA5E /* tea 2.jpg in Resources */,
+				4A946188202AB094008BAA5E /* Coffee 2.jpg in Resources */,
+				4A94618C202AB094008BAA5E /* milk 1.jpg in Resources */,
 				4A94616F202AB019008BAA5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A94616C202AB019008BAA5E /* ViewController.m in Sources */,
 				4A946169202AB019008BAA5E /* AppDelegate.m in Sources */,
 				4A946166202AB019008BAA5E /* main.m in Sources */,
+				4A946197202AB0CA008BAA5E /* myData.m in Sources */,
+				4A946198202AB0CA008BAA5E /* TableViewController.m in Sources */,
+				4A946199202AB0CA008BAA5E /* ViewController.m in Sources */,
+				4A94619C202AB100008BAA5E /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
