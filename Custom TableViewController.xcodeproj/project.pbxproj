@@ -12,20 +12,20 @@
 		4A94616F202AB019008BAA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A94616D202AB019008BAA5E /* Main.storyboard */; };
 		4A946171202AB019008BAA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A946170202AB019008BAA5E /* Assets.xcassets */; };
 		4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A946172202AB019008BAA5E /* LaunchScreen.storyboard */; };
-		4A946187202AB094008BAA5E /* Coffee 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A94617D202AB094008BAA5E /* Coffee 1.jpg */; };
-		4A946188202AB094008BAA5E /* Coffee 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A94617E202AB094008BAA5E /* Coffee 2.jpg */; };
-		4A946189202AB094008BAA5E /* Coffee 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A94617F202AB094008BAA5E /* Coffee 3.jpg */; };
-		4A94618A202AB094008BAA5E /* Coffee 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946180202AB094008BAA5E /* Coffee 4.jpg */; };
-		4A94618B202AB094008BAA5E /* mik 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946181202AB094008BAA5E /* mik 2.jpg */; };
-		4A94618C202AB094008BAA5E /* milk 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946182202AB094008BAA5E /* milk 1.jpg */; };
-		4A94618D202AB094008BAA5E /* milk 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946183202AB094008BAA5E /* milk 3.jpg */; };
-		4A94618E202AB094008BAA5E /* tea 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946184202AB094008BAA5E /* tea 1.jpg */; };
-		4A94618F202AB094008BAA5E /* tea 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946185202AB094008BAA5E /* tea 2.jpg */; };
-		4A946190202AB094008BAA5E /* tea 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A946186202AB094008BAA5E /* tea 3.jpg */; };
 		4A946197202AB0CA008BAA5E /* myData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946192202AB0CA008BAA5E /* myData.m */; };
 		4A946198202AB0CA008BAA5E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946194202AB0CA008BAA5E /* TableViewController.m */; };
 		4A946199202AB0CA008BAA5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946196202AB0CA008BAA5E /* ViewController.m */; };
 		4A94619C202AB100008BAA5E /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A94619B202AB100008BAA5E /* Cell.m */; };
+		4A9461AB202B163C008BAA5E /* AMERICANO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */; };
+		4A9461AC202B163C008BAA5E /* CAPPUCINO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */; };
+		4A9461AD202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */; };
+		4A9461AE202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A4202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg */; };
+		4A9461AF202B163C008BAA5E /* LATTE ĐÁ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A5202B163C008BAA5E /* LATTE ĐÁ.jpg */; };
+		4A9461B0202B163C008BAA5E /* MATCHA MACCHIATO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A6202B163C008BAA5E /* MATCHA MACCHIATO.jpg */; };
+		4A9461B1202B163C008BAA5E /* milk 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A7202B163C008BAA5E /* milk 3.jpg */; };
+		4A9461B2202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */; };
+		4A9461B3202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */; };
+		4A9461B4202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,16 +37,6 @@
 		4A946170202AB019008BAA5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A946173202AB019008BAA5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A946175202AB019008BAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A94617D202AB094008BAA5E /* Coffee 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 1.jpg"; sourceTree = "<group>"; };
-		4A94617E202AB094008BAA5E /* Coffee 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 2.jpg"; sourceTree = "<group>"; };
-		4A94617F202AB094008BAA5E /* Coffee 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 3.jpg"; sourceTree = "<group>"; };
-		4A946180202AB094008BAA5E /* Coffee 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Coffee 4.jpg"; sourceTree = "<group>"; };
-		4A946181202AB094008BAA5E /* mik 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mik 2.jpg"; sourceTree = "<group>"; };
-		4A946182202AB094008BAA5E /* milk 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "milk 1.jpg"; sourceTree = "<group>"; };
-		4A946183202AB094008BAA5E /* milk 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "milk 3.jpg"; sourceTree = "<group>"; };
-		4A946184202AB094008BAA5E /* tea 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tea 1.jpg"; sourceTree = "<group>"; };
-		4A946185202AB094008BAA5E /* tea 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tea 2.jpg"; sourceTree = "<group>"; };
-		4A946186202AB094008BAA5E /* tea 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tea 3.jpg"; sourceTree = "<group>"; };
 		4A946191202AB0CA008BAA5E /* myData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myData.h; sourceTree = "<group>"; };
 		4A946192202AB0CA008BAA5E /* myData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myData.m; sourceTree = "<group>"; };
 		4A946193202AB0CA008BAA5E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -55,6 +45,16 @@
 		4A946196202AB0CA008BAA5E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4A94619A202AB100008BAA5E /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		4A94619B202AB100008BAA5E /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AMERICANO NÓNG.jpg"; sourceTree = "<group>"; };
+		4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CAPPUCINO NÓNG.jpg"; sourceTree = "<group>"; };
+		4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CARAMEL MACHIATO NÓNG.jpg"; sourceTree = "<group>"; };
+		4A9461A4202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ESPRESSO SỮA NÓNG.jpg"; sourceTree = "<group>"; };
+		4A9461A5202B163C008BAA5E /* LATTE ĐÁ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "LATTE ĐÁ.jpg"; sourceTree = "<group>"; };
+		4A9461A6202B163C008BAA5E /* MATCHA MACCHIATO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MATCHA MACCHIATO.jpg"; sourceTree = "<group>"; };
+		4A9461A7202B163C008BAA5E /* milk 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "milk 3.jpg"; sourceTree = "<group>"; };
+		4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MOCHA ĐÁ XAY.jpg"; sourceTree = "<group>"; };
+		4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRÀ MATCHA LATTE ĐÁ.jpg"; sourceTree = "<group>"; };
+		4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRÀ MATCHA LATTE NÓNG.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,16 +113,16 @@
 		4A94617C202AB087008BAA5E /* img */ = {
 			isa = PBXGroup;
 			children = (
-				4A94617D202AB094008BAA5E /* Coffee 1.jpg */,
-				4A94617E202AB094008BAA5E /* Coffee 2.jpg */,
-				4A94617F202AB094008BAA5E /* Coffee 3.jpg */,
-				4A946180202AB094008BAA5E /* Coffee 4.jpg */,
-				4A946181202AB094008BAA5E /* mik 2.jpg */,
-				4A946182202AB094008BAA5E /* milk 1.jpg */,
-				4A946183202AB094008BAA5E /* milk 3.jpg */,
-				4A946184202AB094008BAA5E /* tea 1.jpg */,
-				4A946185202AB094008BAA5E /* tea 2.jpg */,
-				4A946186202AB094008BAA5E /* tea 3.jpg */,
+				4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */,
+				4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */,
+				4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */,
+				4A9461A4202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg */,
+				4A9461A5202B163C008BAA5E /* LATTE ĐÁ.jpg */,
+				4A9461A6202B163C008BAA5E /* MATCHA MACCHIATO.jpg */,
+				4A9461A7202B163C008BAA5E /* milk 3.jpg */,
+				4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */,
+				4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */,
+				4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -139,8 +139,8 @@
 		4A94619F202AB19A008BAA5E /* Table_Cell */ = {
 			isa = PBXGroup;
 			children = (
-				4A946194202AB0CA008BAA5E /* TableViewController.m */,
 				4A946193202AB0CA008BAA5E /* TableViewController.h */,
+				4A946194202AB0CA008BAA5E /* TableViewController.m */,
 				4A94619A202AB100008BAA5E /* Cell.h */,
 				4A94619B202AB100008BAA5E /* Cell.m */,
 			);
@@ -215,18 +215,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A946187202AB094008BAA5E /* Coffee 1.jpg in Resources */,
+				4A9461AF202B163C008BAA5E /* LATTE ĐÁ.jpg in Resources */,
+				4A9461B0202B163C008BAA5E /* MATCHA MACCHIATO.jpg in Resources */,
+				4A9461B2202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg in Resources */,
+				4A9461AB202B163C008BAA5E /* AMERICANO NÓNG.jpg in Resources */,
 				4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */,
-				4A946189202AB094008BAA5E /* Coffee 3.jpg in Resources */,
-				4A94618B202AB094008BAA5E /* mik 2.jpg in Resources */,
-				4A946190202AB094008BAA5E /* tea 3.jpg in Resources */,
-				4A94618A202AB094008BAA5E /* Coffee 4.jpg in Resources */,
-				4A94618E202AB094008BAA5E /* tea 1.jpg in Resources */,
-				4A94618D202AB094008BAA5E /* milk 3.jpg in Resources */,
+				4A9461B3202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg in Resources */,
+				4A9461AC202B163C008BAA5E /* CAPPUCINO NÓNG.jpg in Resources */,
+				4A9461B1202B163C008BAA5E /* milk 3.jpg in Resources */,
+				4A9461AD202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg in Resources */,
 				4A946171202AB019008BAA5E /* Assets.xcassets in Resources */,
-				4A94618F202AB094008BAA5E /* tea 2.jpg in Resources */,
-				4A946188202AB094008BAA5E /* Coffee 2.jpg in Resources */,
-				4A94618C202AB094008BAA5E /* milk 1.jpg in Resources */,
+				4A9461AE202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg in Resources */,
+				4A9461B4202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg in Resources */,
 				4A94616F202AB019008BAA5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +363,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93L9L9RF27;
 				INFOPLIST_FILE = "Custom TableViewController/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idevbao.Custom-TableViewController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93L9L9RF27;
 				INFOPLIST_FILE = "Custom TableViewController/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idevbao.Custom-TableViewController";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,10 +9,12 @@
 #import "myData.h"
 
 @implementation myData
--(instancetype)initmyDataName_vi:(NSString *)nameVi name_Kr:(NSString *)nameKr andPrice:(float)price{
-        _name_Vi = nameVi;
-        _name_Kr = nameKr;
-        _price = price;
+-(instancetype)initmyDataNameVi:(NSString *)nameVi NameKr:(NSString *)nameKr Product:(NSString*)product andPrice:(float)price{
+    _nameVi = nameVi;
+    _nameKr = nameKr;
+    _price = price;
+    _product = product;
+    _quantity = 0;
     return self;
 }
 
