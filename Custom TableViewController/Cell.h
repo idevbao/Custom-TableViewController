@@ -7,26 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "myData.h"
 
-@interface Cell : UITableViewCell{
-UILabel*lbl_table_food;
-UILabel*lbl_title_food;
-
-UILabel*lbl_money_food;
-UIView*view_table_food;
-
-UIButton*btn_table_food;
-UIButton*btn_tru;
-UIButton*btn_cong;
-
-UILabel*lbl_Coutn;
+@interface Cell : UITableViewCell
+@property (nonatomic,strong)UILabel*lblNameCategoryVi;
+@property (nonatomic,strong)UILabel*lblNameCategoryKr;
+@property (nonatomic,strong)UILabel*lblPrice;
+@property (nonatomic,strong)UIImageView*imgViewCategory;
+@property (nonatomic,strong)UILabel*lblQuantityCategory;
 
 
-UIImageView*imgview_table_food;
-}
-@property (nonatomic,assign)int countSL;
-@property (nonatomic,assign)float total;
-@property (nonatomic,assign)float money;
+@property (nonatomic,strong)UIButton*btnOder;
+@property (nonatomic,strong)UIButton*btnTru;
+@property (nonatomic,strong)UIButton*btnCong;
 
+
+@property (nonatomic,assign)int QuantityCategory;
+@property (nonatomic,assign)float PriceCategory;
+@property (nonatomic,assign)CGFloat heightRow;
+@property (nonatomic,assign)CGFloat widthRow;
+
+@property (nonatomic,strong)myData * mydata;
 -(instancetype)init_cell;
 @end
