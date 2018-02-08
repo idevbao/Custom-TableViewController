@@ -58,14 +58,11 @@ TableViewController *tablevc;
 
 }
 -(void)btadd:(UIButton*)bt{
-    myData * inData = [[myData alloc] initmyDataName_vi:txtVi.text name_Kr:txtkr.text andPrice:[txtpr.text integerValue]];
-    
-    [_Datas setObject:inData forKey:inData.name_Vi];
     NSLog(@"add");
 }
 
 -(void)btshow:(UIButton*)bt{
-    NSLog(@"%@",((myData*)[_Datas objectForKey:txtVi.text]).name_Kr);
+    NSLog(@"%@",((myData*)[_Datas objectForKey:txtVi.text]).nameKr);
     NSLog(@"show");
 }
 - (void)buttonActionPush:(UIButton*)sender{

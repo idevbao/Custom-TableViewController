@@ -14,19 +14,6 @@
 @class ViewController;
 @protocol Passdata;
 @interface TableViewController : UITableViewController < UITableViewDelegate, UITableViewDataSource>
-{
-    UILabel*lbl_nameVi_food;
-    UILabel*lbl_nameKr_food;
-    
-    UILabel*lbl_money_food;
-
-    
-    UIButton*btn_food;
-    UIButton*btn_tru;
-    UIButton*btn_cong;
-    
-    UILabel*lbl_Coutn;
-}
 
 @property(nonatomic,strong)NSMutableArray* mArrayCategoryMilk;
 @property(nonatomic,strong)NSMutableArray* mArrayCategoryTea;
