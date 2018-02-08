@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface myData : NSObject
-@property(nonatomic, strong) NSString* name_Vi;
-@property(nonatomic, strong) NSString* name_Kr;
+@property(nonatomic, strong) NSString* nameVi;
+@property(nonatomic, strong) NSString* nameKr;
+@property(nonatomic, strong) NSString* product;
 @property(nonatomic, assign) float price;
-@property(nonatomic, assign) float quantity;
+@property(nonatomic, assign) int quantity;
+@property(nonatomic,assign) float totals;
 
--(instancetype)initmyDataName_vi:(NSString*)nameVi name_Kr:(NSString*)nameKr andPrice:(float)price;
+-(instancetype)initmyDataNameVi:(NSString *)nameVi NameKr:(NSString *)nameKr Product:(NSString*)product andPrice:(float)pric;
 
 @end
