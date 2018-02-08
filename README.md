@@ -1,12 +1,8 @@
 # Core_TableVCtr
-Core_TableVCtr
-
-Core_TableVCtr
-
 //
-//  TableViewController.m
-//
-//  TableViewController.m
+//  TableViewController
+//  [iDev Bảo]
+//  TableViewController
 
-#pragma  mark đã fix bằng reload Cell
+
     
