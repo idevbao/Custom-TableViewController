@@ -28,5 +28,5 @@
 @property (nonatomic,assign)CGFloat widthRow;
 
 @property (nonatomic,strong)myData * mydata;
--(instancetype)init_cell;
+-(instancetype)init_cell:(UITableViewController*)table;
 @end

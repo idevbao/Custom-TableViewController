@@ -20,19 +20,16 @@
 
     // Configure the view for the selected state
 }
--(instancetype)init_cell{
+-(instancetype)init_cell:(UITableViewController*)table{
     self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
-    
+
 #pragma custom Cell
     UIViewController *vController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    
     float padding =2;
-
-    _heightRow = (vController.view.frame.size.height - 2*([UIApplication sharedApplication].statusBarFrame.size.height))/5.95;
+    CGFloat naviHeight = table.navigationController.navigationBar.frame.size.height;
+    _heightRow = (vController.view.frame.size.height -([UIApplication sharedApplication].statusBarFrame.size.height)- naviHeight)/5.95;
     _widthRow = vController.view.frame.size.width;
 
-
-    
 #pragma mark - lbl
     _lblNameCategoryVi = [[UILabel alloc] initWithFrame:CGRectMake(padding+_widthRow/3,padding, (_widthRow/1.7), (_heightRow/4)-2*padding)];
     _lblNameCategoryVi.backgroundColor = [UIColor grayColor];
@@ -55,30 +52,22 @@
     _lblPrice.textColor = [UIColor greenColor];
     [self addSubview:_lblPrice];
     
-    
     _lblQuantityCategory = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow*7/10,3*_heightRow/4, _widthRow/10, (_heightRow/4))];
     _lblQuantityCategory.backgroundColor = [UIColor grayColor];
     _lblQuantityCategory.textAlignment = NSTextAlignmentCenter;
     _lblQuantityCategory.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:25];
     _lblQuantityCategory.textColor = [UIColor whiteColor];
     _lblQuantityCategory.hidden = NO;
-    
     _lblQuantityCategory.text = 0;
 #pragma mark _data
-
     [self addSubview:_lblQuantityCategory];
 #pragma mark - img
     _imgViewCategory = [[UIImageView alloc] initWithFrame:CGRectMake(padding, padding, (_widthRow)/2.5, _heightRow -2*padding)];
     [self addSubview:_imgViewCategory];
-    
     _imgViewCategory.contentMode  = UIViewContentModeScaleAspectFit;
-    
-    
 #pragma mark -  add btn in view
-    
     _QuantityCategory = [_lblQuantityCategory.text intValue];
     _PriceCategory = [_lblPrice.text intValue];
-    
     //btn add
 //    _btnOder= [[UIButton alloc]initWithFrame:CGRectMake(_widthRow*7/10,3*_heightRow/4 , _widthRow/10, _heightRow/4) ];
 //    _btnOder.backgroundColor = [UIColor greenColor];
@@ -103,8 +92,6 @@
     [_btnCong addTarget:self action:@selector(setBTNCong:) forControlEvents:UIControlEventTouchDown];
     return self;
 }
-
-
 //-(void)setBTAdd:(id)btn{
 //    _QuantityCategory = 1;
 //        NSLog(@"%@",_mydata.nameVi);
@@ -121,12 +108,8 @@
 //
 //    
 //}
-
 -(void)setBTNTru:(id)btn{
         NSLog(@"%@",_mydata.nameVi);
-
-
-    
 //    if (_QuantityCategory < 1) {
 //        _btnOder.hidden = NO;
 //        _btnTru.hidden = YES;
@@ -135,9 +118,11 @@
 //    }
     _QuantityCategory --;
     _mydata.quantity = _QuantityCategory;
+    if (_QuantityCategory<=0) {
+        _mydata.quantity = 0;
+        _QuantityCategory = 0;
+    }
     _lblQuantityCategory.text = [NSString stringWithFormat:@"%d",_mydata.quantity];
-
-
 }
 -(void)setBTNCong:(id)btn{
         NSLog(@"%@",_mydata.nameVi);
@@ -150,7 +135,6 @@
     _QuantityCategory ++;
     _mydata.quantity = _QuantityCategory;
     _lblQuantityCategory.text = [NSString stringWithFormat:@"%d",_mydata.quantity];
-
 }
 
 

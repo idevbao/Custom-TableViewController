@@ -90,9 +90,8 @@
 				4A94619D202AB171008BAA5E /* iCore */,
 				4A9461A0202AB1D2008BAA5E /* Model */,
 				4A94619F202AB19A008BAA5E /* Table_Cell */,
-				4A946195202AB0CA008BAA5E /* ViewController.h */,
-				4A946196202AB0CA008BAA5E /* ViewController.m */,
 				4A94617C202AB087008BAA5E /* img */,
+				4AF79929202D648C00E506E2 /* More */,
 				4A946164202AB019008BAA5E /* Supporting Files */,
 			);
 			path = "Custom TableViewController";
@@ -154,6 +153,15 @@
 				4A946192202AB0CA008BAA5E /* myData.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4AF79929202D648C00E506E2 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				4A946195202AB0CA008BAA5E /* ViewController.h */,
+				4A946196202AB0CA008BAA5E /* ViewController.m */,
+			);
+			name = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +410,7 @@
 				4A94617A202AB019008BAA5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -29,7 +29,6 @@ float  result;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     myData * mydata = [[myData alloc] initmyDataNameVi:@"CAPPUCINO NÓNG" NameKr:@"Cappucino (Hot)"
                                                Product:@"Coffee" andPrice:10.5];
     myData * mydata1 =[[myData alloc] initmyDataNameVi:@"AMERICANO NÓNG" NameKr:@"Espresso (Hot)"
@@ -74,12 +73,12 @@ float  result;
     pay.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:pay];
     [pay addTarget:self action:@selector(Pay:) forControlEvents:UIControlEventTouchDown];
-//    pay.translatesAutoresizingMaskIntoConstraints = YES;
-//    [pay.centerXAnchor constraintEqualToAnchor:self.tableView.centerXAnchor constant:0].active = YES;
-//    [pay.centerYAnchor constraintEqualToAnchor:self.tableView.centerYAnchor constant:0].active = YES;
-//    //        [pay.topAnchor constraintEqualToAnchor:self.navigationController.navigationBar.topAnchor constant:10].active = YES;
-//            [pay.widthAnchor constraintEqualToAnchor:self.tableView.widthAnchor multiplier:0.5].active = YES;
-//            [pay.heightAnchor constraintEqualToAnchor:self.tableView.widthAnchor multiplier:0.5].active = YES;
+    //    pay.translatesAutoresizingMaskIntoConstraints = YES;
+    //    [pay.centerXAnchor constraintEqualToAnchor:self.tableView.centerXAnchor constant:0].active = YES;
+    //    [pay.centerYAnchor constraintEqualToAnchor:self.tableView.centerYAnchor constant:0].active = YES;
+    //    //        [pay.topAnchor constraintEqualToAnchor:self.navigationController.navigationBar.topAnchor constant:10].active = YES;
+    //            [pay.widthAnchor constraintEqualToAnchor:self.tableView.widthAnchor multiplier:0.5].active = YES;
+    //            [pay.heightAnchor constraintEqualToAnchor:self.tableView.widthAnchor multiplier:0.5].active = YES;
     //
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -102,7 +101,7 @@ float  result;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //#warning Incomplete implementation, return the number of rows
-    NSMutableArray  * row_ofSection =   [_mArrayProduct objectAtIndex:section];
+    NSMutableArray  * row_ofSection =  [_mArrayProduct objectAtIndex:section];
     return row_ofSection.count;
 }
 
@@ -122,21 +121,19 @@ float  result;
 #pragma mark - init Cell
     // method này thì luôn trả về cell và được size phù hợp do đã đăng kí cell nạp style và identifier cho cell bằng code hoặc thêm trên xib :     [self.tableView registerClass:[Cell class] forCellReuseIdentifier:@"Cell"];
     // cell = (Cell*)[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
     // Used by the delegate to acquire an already allocated cell, in lieu of allocating a new one. : return Cell có thể bị nil bắt buộc dùng if để tạo Style: Cell reuseIdentifier: đặc danh cho cell
     // Gọi cell bằng phương thức định danh nếu chưa có thì khởi tạo tránh tạo nhiều khi kéo thả tableview
     cell = (Cell*)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     // va kiem tra da ton tai chua
     Product =   [_mArrayProduct objectAtIndex:indexPath.section];
     if (cell == nil) {// vung ton bo nho
-        cell =[[Cell alloc]init_cell];
+        cell =[[Cell alloc]init_cell:self];
     }
     NSString * Category = ((myData*)[Product objectAtIndex:indexPath.row]).nameVi;
     NSString * CategoryVi = ((myData*)[Product objectAtIndex:indexPath.row]).nameVi;
     NSString * CategoryKr = ((myData*)[Product objectAtIndex:indexPath.row]).nameKr;
     float  CategoryPrice = ((myData*)[Product objectAtIndex:indexPath.row]).price;
     int QuantityCategory =  ((myData*)[Product objectAtIndex:indexPath.row]).quantity;
-    
     //    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",Category]];
     //// paint img len context
     //    [cell.imageView.image drawInRect:CGRectMake(cell.imageView.frame.origin.x, cell.imageView.frame.origin.y, self.view.frame.size.width/2, self.tableView.rowHeight -2)];
@@ -157,19 +154,19 @@ float  result;
 }
 #pragma mark - @optional
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     //    NSMutableArray  * row_ofSection =   [_mArrayProduct objectAtIndex:indexPath.section];
     //    myData* mData = [row_ofSection objectAtIndex:indexPath.row];
-    
     cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.contentView.backgroundColor = [UIColor whiteColor];
     NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
     NSArray* rowsToReload = [NSArray arrayWithObjects:rowToReload,nil];
     [tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
-    
 }
 -(void)Pay:(UIButton*)bt{
     float s=0;
+    NSString * title = @"";
+    UIAlertAction* yesButton;
+    UIAlertAction* noButton;
     for (int  i=0; i<_mArrayProduct.count; i++  ) {
         NSMutableArray * item = [_mArrayProduct objectAtIndex:i];
         for (int y = 0;y<item.count; y++ ) {
@@ -179,56 +176,46 @@ float  result;
             s+=data.totals;
         }
     }
-    if (s == 0) {
-        UIAlertController * alert = [UIAlertController
-                                     alertControllerWithTitle:@"LaDoCoffee"
-                                     message:@"Bạn chưa Oder vui lòng chọn món!"
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* yesButton = [UIAlertAction
-                                    actionWithTitle:@"Out"
-                                    style:UIAlertActionStyleDefault
-                                    handler:^(UIAlertAction * action) {
-                                        [self dismissViewControllerAnimated:YES completion:nil];
-                                    }];
-        [alert addAction:yesButton];
-        [self presentViewController:alert animated:YES completion:nil];
+    if (s > 0) {
+        yesButton = [UIAlertAction
+                     actionWithTitle:@"Thanh toán!"
+                     style:UIAlertActionStyleDestructive
+                     handler:^(UIAlertAction * action) {
+                         for (int  i=0; i<_mArrayProduct.count; i++  ) {
+                             NSMutableArray * item = [_mArrayProduct objectAtIndex:i];
+                             for (int y = 0;y<item.count; y++ ) {
+                                 myData *data = [item objectAtIndex:y];
+                                 data.quantity = 0;
+                                 NSLog(@"%f",data.totals);
+                             }
+                         }
+                         [self.tableView reloadData];
+                         NSLog(@"thành tiền: %0.2f",s);
+                     }];
+        noButton = [UIAlertAction
+                    actionWithTitle:@"Cancel"
+                    style:UIAlertActionStyleCancel
+                    handler:^(UIAlertAction * action) {
+                    }];
+        title = [NSString stringWithFormat:@"Bạn muốn thanh toán: $%0.2f",s];
     }
-    //Add Buttons
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"LaDoCoffee"
-                                 message:@"Bạn muốn thanh toán!"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    [self presentViewController:alert animated:YES completion:nil];
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"Yes"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    
-                                    for (int  i=0; i<_mArrayProduct.count; i++  ) {
-                                        NSMutableArray * item = [_mArrayProduct objectAtIndex:i];
-                                        for (int y = 0;y<item.count; y++ ) {
-                                            myData *data = [item objectAtIndex:y];
-                                            data.quantity = 0;
-                                            NSLog(@"%f",data.totals);
-                                        }
-                                    }
-                                    [self.tableView reloadData];
-                                    NSLog(@"thành tiền: %0.2f",s);
-                                    [self dismissViewControllerAnimated:YES completion:nil];   ;
-                                }];
-    
-    UIAlertAction* noButton = [UIAlertAction
-                               actionWithTitle:@"Cancel"
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction * action) {
-                                   [self dismissViewControllerAnimated:YES completion:nil];
-                               }];
-    
-    //Add your buttons to alert controller
-    
-    [alert addAction:yesButton];
-    [alert addAction:noButton];
-    
+    if (s==0){
+        title =@"Bạn chưa Oder vui lòng chọn món!";
+        noButton = [UIAlertAction
+                    actionWithTitle:@"Oder"
+                    style:UIAlertActionStyleCancel
+                    handler:^(UIAlertAction * action) {
+                    }];
+    }
+    UIAlertController * alertShow = [UIAlertController alertControllerWithTitle:@"The LADOcoffee" message:title preferredStyle:UIAlertControllerStyleActionSheet];
+    if (s > 0) {
+        [alertShow addAction:yesButton];
+        [alertShow addAction:noButton];
+    }
+    if (s==0) {
+        [alertShow addAction:noButton];
+    }
+    [self presentViewController:alertShow animated:YES completion:nil];
 }
 
 // Override to support conditional editing of the table view.
@@ -240,7 +227,6 @@ float  result;
 #pragma mark  Display customization
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSMutableArray * row_ofSection = [_mArrayProduct objectAtIndex:section];
-    
     return ((myData*)[row_ofSection objectAtIndex:section]).product;
 }
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
@@ -251,8 +237,7 @@ float  result;
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return (self.view.frame.size.height - ([UIApplication sharedApplication].statusBarFrame.size.height))/5.95;
+    return cell.heightRow;
 }
 
 /*
