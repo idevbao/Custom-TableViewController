@@ -1,24 +1,25 @@
 //
-//  TableViewController.m
+//  Food_drinkTableViewController.m
 //  Core_TableVCtr
 //
 //  Created by Trúc Phương >_< on 02/02/2018.
 //  Copyright © 2018 iDev Bao. All rights reserved.
 //
 
-#import "TableViewController.h"
-#import "ViewController.h"
-@protocol Passdata;
-@interface TableViewController ()
+#import "Food_drinkTableViewController.h"
+
+@interface Food_drinkTableViewController ()
 @end
 
-@implementation TableViewController
-Cell*cell;
-NSTimer * timer;
+@implementation Food_drinkTableViewController
+Food_drink_hotCell*cell;
+
 NSMutableArray  * Product;
 float  result;
 
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+   }
 -(void)loadView{
     [super loadView];
     _mArrayProduct  = [NSMutableArray new];
@@ -29,6 +30,8 @@ float  result;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
     myData * mydata = [[myData alloc] initmyDataNameVi:@"CAPPUCINO NÓNG" NameKr:@"Cappucino (Hot)"
                                                Product:@"Coffee" andPrice:10.5];
     myData * mydata1 =[[myData alloc] initmyDataNameVi:@"AMERICANO NÓNG" NameKr:@"Espresso (Hot)"
@@ -38,39 +41,28 @@ float  result;
     myData * mydata3 =[[myData alloc] initmyDataNameVi:@"ESPRESSO SỮA NÓNG" NameKr:@"ESPRESSO (Hot)"
                                                Product:@"Coffee" andPrice:21.9];
     
-    myData * mydata5 =[[myData alloc] initmyDataNameVi:@"MOCHA ĐÁ XAY" NameKr:@"Espresso, milk, socola" \
+    myData * mydata5 =[[myData alloc] initmyDataNameVi:@"MOCHA ĐÁ XAY" NameKr:@"Espresso, milk, socola" 
                                                Product:@"MILK" andPrice:10];
     myData * mydata7 =[[myData alloc] initmyDataNameVi:@"LATTE ĐÁ" NameKr:@"LATTE"
-                                               Product:@"MILK" andPrice:10];
+                                               Product:@"MILK" andPrice:10.1];
     
     myData * mydata10=[[myData alloc] initmyDataNameVi:@"TRÀ MATCHA LATTE NÓNG" NameKr:@"TEA (Hot)"
                                                Product:@"TEA" andPrice:10.99];
     
     myData * mydata11=[[myData alloc] initmyDataNameVi:@"MATCHA MACCHIATO" NameKr:@"MACCHIATO"
-                                               Product:@"TEA" andPrice:10];
+                                               Product:@"TEA" andPrice:10.5];
     
     myData * mydata12=[[myData alloc] initmyDataNameVi:@"TRÀ MATCHA LATTE ĐÁ" NameKr:@"MATCHA LATTE "
-                                               Product:@"TEA" andPrice:10];
-    [_mArrayCategoryCoffee addObject:mydata];
-    [_mArrayCategoryCoffee addObject:mydata2];
-    [_mArrayCategoryCoffee addObject:mydata3];
-    [_mArrayCategoryCoffee addObject:mydata1];
-    
-    [_mArrayCategoryMilk addObject:mydata5];
-    [_mArrayCategoryMilk addObject:mydata7];
-    
-    [_mArrayCategoryTea addObject:mydata10];
-    [_mArrayCategoryTea addObject:mydata11];
-    [_mArrayCategoryTea addObject:mydata12];
-    
-    [_mArrayProduct addObject:_mArrayCategoryMilk];
-    [_mArrayProduct addObject:_mArrayCategoryCoffee];
-    [_mArrayProduct addObject:_mArrayCategoryTea];
+                                               Product:@"TEA" andPrice:10.9];
+    [_mArrayCategoryCoffee addObjectsFromArray:@[mydata,mydata1,mydata2,mydata3]];
+    [_mArrayCategoryMilk addObjectsFromArray:@[mydata5,mydata7]];
+    [_mArrayCategoryTea addObjectsFromArray:@[mydata10,mydata11,mydata12]];
+    [_mArrayProduct addObjectsFromArray:@[_mArrayCategoryTea ,_mArrayCategoryMilk,_mArrayCategoryCoffee]];
     
 #pragma mark -Autolayout:
     
-    UIButton * pay = [[UIButton alloc] initWithFrame:CGRectMake(0, 500, 100, 50)];
-    pay.backgroundColor = [UIColor yellowColor];
+    UIButton * pay = [[UIButton alloc] initWithFrame:CGRectMake(0, 500, 50, 50)];
+    pay.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:pay];
     [pay addTarget:self action:@selector(Pay:) forControlEvents:UIControlEventTouchDown];
     //    pay.translatesAutoresizingMaskIntoConstraints = YES;
@@ -123,11 +115,11 @@ float  result;
     // cell = (Cell*)[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     // Used by the delegate to acquire an already allocated cell, in lieu of allocating a new one. : return Cell có thể bị nil bắt buộc dùng if để tạo Style: Cell reuseIdentifier: đặc danh cho cell
     // Gọi cell bằng phương thức định danh nếu chưa có thì khởi tạo tránh tạo nhiều khi kéo thả tableview
-    cell = (Cell*)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell = (Food_drink_hotCell*)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     // va kiem tra da ton tai chua
     Product =   [_mArrayProduct objectAtIndex:indexPath.section];
     if (cell == nil) {// vung ton bo nho
-        cell =[[Cell alloc]init_cell:self];
+        cell =[[Food_drink_hotCell alloc]init_cell:self];
     }
     NSString * Category = ((myData*)[Product objectAtIndex:indexPath.row]).nameVi;
     NSString * CategoryVi = ((myData*)[Product objectAtIndex:indexPath.row]).nameVi;
@@ -142,6 +134,7 @@ float  result;
 #pragma  mark
     UIImage * imgCategory = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",Category]];
     cell.imgViewCategory  = [cell.imgViewCategory initWithImage:imgCategory ];
+    
     cell.lblNameCategoryVi.text = CategoryVi;
     cell.lblNameCategoryKr.text = CategoryKr;
     cell.lblPrice.text = [NSString stringWithFormat:@"%0.2f",CategoryPrice];
@@ -150,18 +143,19 @@ float  result;
     cell.mydata = [Product objectAtIndex:indexPath.row];
     [cell.textLabel setTextColor:[UIColor greenColor]];
     cell.backgroundColor = [UIColor whiteColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 #pragma mark - @optional
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //    NSMutableArray  * row_ofSection =   [_mArrayProduct objectAtIndex:indexPath.section];
-    //    myData* mData = [row_ofSection objectAtIndex:indexPath.row];
-    cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.contentView.backgroundColor = [UIColor whiteColor];
-    NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
-    NSArray* rowsToReload = [NSArray arrayWithObjects:rowToReload,nil];
-    [tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
+   
+
 }
+-(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+}
+
 -(void)Pay:(UIButton*)bt{
     float s=0;
     NSString * title = @"";
@@ -186,10 +180,10 @@ float  result;
                              for (int y = 0;y<item.count; y++ ) {
                                  myData *data = [item objectAtIndex:y];
                                  data.quantity = 0;
-                                 NSLog(@"%f",data.totals);
-                             }
+                                 NSLog(@"%fssss",data.totals);
+                            }
                          }
-                         [self.tableView reloadData];
+                        
                          NSLog(@"thành tiền: %0.2f",s);
                      }];
         noButton = [UIAlertAction
@@ -208,6 +202,7 @@ float  result;
                     }];
     }
     UIAlertController * alertShow = [UIAlertController alertControllerWithTitle:@"The LADOcoffee" message:title preferredStyle:UIAlertControllerStyleActionSheet];
+
     if (s > 0) {
         [alertShow addAction:yesButton];
         [alertShow addAction:noButton];
@@ -230,7 +225,7 @@ float  result;
     return ((myData*)[row_ofSection objectAtIndex:section]).product;
 }
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
-    view.tintColor = [UIColor grayColor];
+    view.tintColor = [UIColor brownColor];
     [((UITableViewHeaderFooterView *)view).textLabel setTextColor:[UIColor whiteColor]];
 }
 -(void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section{

@@ -1,15 +1,15 @@
 //
-//  Cell.h
-//  Core_TableVCtr
+//  CellFood.h
+//  Custom TableViewController
 //
-//  Created by Trúc Phương >_< on 02/02/2018.
+//  Created by Trúc Phương >_< on 11/02/2018.
 //  Copyright © 2018 iDev Bao. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "myData.h"
+@interface CellFood : UITableViewCell
 
-@interface Cell : UITableViewCell
 @property (nonatomic,strong)UILabel*lblNameCategoryVi;
 @property (nonatomic,strong)UILabel*lblNameCategoryKr;
 @property (nonatomic,strong)UILabel*lblPrice;
@@ -28,5 +28,6 @@
 @property (nonatomic,assign)CGFloat widthRow;
 
 @property (nonatomic,strong)myData * mydata;
--(instancetype)init_cell:(UITableViewController*)table;
+-(instancetype)init_cell:(UIViewController*)vc;
+
 @end

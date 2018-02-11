@@ -18,16 +18,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController * home = [[UINavigationController alloc] initWithRootViewController:[TableViewController new]];
-    [home.tabBarItem setTitle:@"HOME"];
+    UINavigationController * HOT = [[UINavigationController alloc] initWithRootViewController:[Food_drinkTableViewController new]];
+    [HOT.tabBarItem setTitle:@"HOT"];
     
 //  set img va selecte
-    UINavigationController * add = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
-    [add.tabBarItem setTitle:@"ADD"];
+    UINavigationController * Food = [[UINavigationController alloc] initWithRootViewController:[FOOD_ViewController new]];
+    [Food.tabBarItem setTitle:@"FOOD"];
 
-    _window.rootViewController = home;
+    _window.rootViewController = Food;
     UITabBarController *tabBar = [UITabBarController new];
-    tabBar.viewControllers = @[home,add];
+    tabBar.viewControllers = @[HOT,Food];
     self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     return YES;

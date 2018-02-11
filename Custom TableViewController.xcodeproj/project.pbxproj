@@ -13,19 +13,21 @@
 		4A946171202AB019008BAA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A946170202AB019008BAA5E /* Assets.xcassets */; };
 		4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A946172202AB019008BAA5E /* LaunchScreen.storyboard */; };
 		4A946197202AB0CA008BAA5E /* myData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946192202AB0CA008BAA5E /* myData.m */; };
-		4A946198202AB0CA008BAA5E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946194202AB0CA008BAA5E /* TableViewController.m */; };
-		4A946199202AB0CA008BAA5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946196202AB0CA008BAA5E /* ViewController.m */; };
-		4A94619C202AB100008BAA5E /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A94619B202AB100008BAA5E /* Cell.m */; };
+		4A946198202AB0CA008BAA5E /* Food_drinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946194202AB0CA008BAA5E /* Food_drinkTableViewController.m */; };
+		4A94619C202AB100008BAA5E /* Food_drink_hotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A94619B202AB100008BAA5E /* Food_drink_hotCell.m */; };
 		4A9461AB202B163C008BAA5E /* AMERICANO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */; };
 		4A9461AC202B163C008BAA5E /* CAPPUCINO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */; };
 		4A9461AD202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */; };
 		4A9461AE202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A4202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg */; };
 		4A9461AF202B163C008BAA5E /* LATTE ĐÁ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A5202B163C008BAA5E /* LATTE ĐÁ.jpg */; };
 		4A9461B0202B163C008BAA5E /* MATCHA MACCHIATO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A6202B163C008BAA5E /* MATCHA MACCHIATO.jpg */; };
-		4A9461B1202B163C008BAA5E /* milk 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A7202B163C008BAA5E /* milk 3.jpg */; };
+		4A9461B1202B163C008BAA5E /* Chocolate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A7202B163C008BAA5E /* Chocolate.jpg */; };
 		4A9461B2202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */; };
 		4A9461B3202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */; };
 		4A9461B4202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */; };
+		4AE2ECB62030252F0088FD36 /* CellFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2ECB52030252F0088FD36 /* CellFood.m */; };
+		4AE2ECB9203029920088FD36 /* FOOD_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2ECB8203029920088FD36 /* FOOD_ViewController.m */; };
+		4AE2ECBB20302F9B0088FD36 /* pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2ECBA20302F9B0088FD36 /* pay.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,22 +41,25 @@
 		4A946175202AB019008BAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A946191202AB0CA008BAA5E /* myData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myData.h; sourceTree = "<group>"; };
 		4A946192202AB0CA008BAA5E /* myData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myData.m; sourceTree = "<group>"; };
-		4A946193202AB0CA008BAA5E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		4A946194202AB0CA008BAA5E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		4A946195202AB0CA008BAA5E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4A946196202AB0CA008BAA5E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4A94619A202AB100008BAA5E /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		4A94619B202AB100008BAA5E /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		4A946193202AB0CA008BAA5E /* Food_drinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food_drinkTableViewController.h; sourceTree = "<group>"; };
+		4A946194202AB0CA008BAA5E /* Food_drinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food_drinkTableViewController.m; sourceTree = "<group>"; };
+		4A94619A202AB100008BAA5E /* Food_drink_hotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food_drink_hotCell.h; sourceTree = "<group>"; };
+		4A94619B202AB100008BAA5E /* Food_drink_hotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food_drink_hotCell.m; sourceTree = "<group>"; };
 		4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AMERICANO NÓNG.jpg"; sourceTree = "<group>"; };
 		4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CAPPUCINO NÓNG.jpg"; sourceTree = "<group>"; };
 		4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CARAMEL MACHIATO NÓNG.jpg"; sourceTree = "<group>"; };
 		4A9461A4202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ESPRESSO SỮA NÓNG.jpg"; sourceTree = "<group>"; };
 		4A9461A5202B163C008BAA5E /* LATTE ĐÁ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "LATTE ĐÁ.jpg"; sourceTree = "<group>"; };
 		4A9461A6202B163C008BAA5E /* MATCHA MACCHIATO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MATCHA MACCHIATO.jpg"; sourceTree = "<group>"; };
-		4A9461A7202B163C008BAA5E /* milk 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "milk 3.jpg"; sourceTree = "<group>"; };
+		4A9461A7202B163C008BAA5E /* Chocolate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chocolate.jpg; sourceTree = "<group>"; };
 		4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MOCHA ĐÁ XAY.jpg"; sourceTree = "<group>"; };
 		4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRÀ MATCHA LATTE ĐÁ.jpg"; sourceTree = "<group>"; };
 		4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRÀ MATCHA LATTE NÓNG.jpg"; sourceTree = "<group>"; };
+		4AE2ECB42030252F0088FD36 /* CellFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFood.h; sourceTree = "<group>"; };
+		4AE2ECB52030252F0088FD36 /* CellFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFood.m; sourceTree = "<group>"; };
+		4AE2ECB7203029920088FD36 /* FOOD_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOOD_ViewController.h; sourceTree = "<group>"; };
+		4AE2ECB8203029920088FD36 /* FOOD_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOOD_ViewController.m; sourceTree = "<group>"; };
+		4AE2ECBA20302F9B0088FD36 /* pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +94,9 @@
 			children = (
 				4A94619D202AB171008BAA5E /* iCore */,
 				4A9461A0202AB1D2008BAA5E /* Model */,
-				4A94619F202AB19A008BAA5E /* Table_Cell */,
+				4A94619F202AB19A008BAA5E /* Home */,
+				4AF79929202D648C00E506E2 /* Food */,
 				4A94617C202AB087008BAA5E /* img */,
-				4AF79929202D648C00E506E2 /* More */,
 				4A946164202AB019008BAA5E /* Supporting Files */,
 			);
 			path = "Custom TableViewController";
@@ -112,13 +117,14 @@
 		4A94617C202AB087008BAA5E /* img */ = {
 			isa = PBXGroup;
 			children = (
+				4AE2ECBA20302F9B0088FD36 /* pay.png */,
 				4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */,
 				4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */,
 				4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */,
 				4A9461A4202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg */,
 				4A9461A5202B163C008BAA5E /* LATTE ĐÁ.jpg */,
 				4A9461A6202B163C008BAA5E /* MATCHA MACCHIATO.jpg */,
-				4A9461A7202B163C008BAA5E /* milk 3.jpg */,
+				4A9461A7202B163C008BAA5E /* Chocolate.jpg */,
 				4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */,
 				4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */,
 				4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */,
@@ -135,15 +141,15 @@
 			name = iCore;
 			sourceTree = "<group>";
 		};
-		4A94619F202AB19A008BAA5E /* Table_Cell */ = {
+		4A94619F202AB19A008BAA5E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4A946193202AB0CA008BAA5E /* TableViewController.h */,
-				4A946194202AB0CA008BAA5E /* TableViewController.m */,
-				4A94619A202AB100008BAA5E /* Cell.h */,
-				4A94619B202AB100008BAA5E /* Cell.m */,
+				4A946193202AB0CA008BAA5E /* Food_drinkTableViewController.h */,
+				4A946194202AB0CA008BAA5E /* Food_drinkTableViewController.m */,
+				4A94619A202AB100008BAA5E /* Food_drink_hotCell.h */,
+				4A94619B202AB100008BAA5E /* Food_drink_hotCell.m */,
 			);
-			name = Table_Cell;
+			name = Home;
 			sourceTree = "<group>";
 		};
 		4A9461A0202AB1D2008BAA5E /* Model */ = {
@@ -155,13 +161,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		4AF79929202D648C00E506E2 /* More */ = {
+		4AF79929202D648C00E506E2 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				4A946195202AB0CA008BAA5E /* ViewController.h */,
-				4A946196202AB0CA008BAA5E /* ViewController.m */,
+				4AE2ECB7203029920088FD36 /* FOOD_ViewController.h */,
+				4AE2ECB8203029920088FD36 /* FOOD_ViewController.m */,
+				4AE2ECB42030252F0088FD36 /* CellFood.h */,
+				4AE2ECB52030252F0088FD36 /* CellFood.m */,
 			);
-			name = More;
+			name = Food;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,10 +235,11 @@
 				4A9461B0202B163C008BAA5E /* MATCHA MACCHIATO.jpg in Resources */,
 				4A9461B2202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg in Resources */,
 				4A9461AB202B163C008BAA5E /* AMERICANO NÓNG.jpg in Resources */,
+				4AE2ECBB20302F9B0088FD36 /* pay.png in Resources */,
 				4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */,
 				4A9461B3202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg in Resources */,
 				4A9461AC202B163C008BAA5E /* CAPPUCINO NÓNG.jpg in Resources */,
-				4A9461B1202B163C008BAA5E /* milk 3.jpg in Resources */,
+				4A9461B1202B163C008BAA5E /* Chocolate.jpg in Resources */,
 				4A9461AD202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg in Resources */,
 				4A946171202AB019008BAA5E /* Assets.xcassets in Resources */,
 				4A9461AE202B163C008BAA5E /* ESPRESSO SỮA NÓNG.jpg in Resources */,
@@ -248,10 +257,11 @@
 			files = (
 				4A946169202AB019008BAA5E /* AppDelegate.m in Sources */,
 				4A946166202AB019008BAA5E /* main.m in Sources */,
+				4AE2ECB62030252F0088FD36 /* CellFood.m in Sources */,
 				4A946197202AB0CA008BAA5E /* myData.m in Sources */,
-				4A946198202AB0CA008BAA5E /* TableViewController.m in Sources */,
-				4A946199202AB0CA008BAA5E /* ViewController.m in Sources */,
-				4A94619C202AB100008BAA5E /* Cell.m in Sources */,
+				4A946198202AB0CA008BAA5E /* Food_drinkTableViewController.m in Sources */,
+				4AE2ECB9203029920088FD36 /* FOOD_ViewController.m in Sources */,
+				4A94619C202AB100008BAA5E /* Food_drink_hotCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93L9L9RF27;
 				INFOPLIST_FILE = "Custom TableViewController/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idevbao.Custom-TableViewController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93L9L9RF27;
 				INFOPLIST_FILE = "Custom TableViewController/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idevbao.Custom-TableViewController";
 				PRODUCT_NAME = "$(TARGET_NAME)";
