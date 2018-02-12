@@ -129,11 +129,27 @@ float  result_Food;
     cellFood.lblNameCategoryKr.text = CategoryKr;
     cellFood.lblPrice.text = [NSString stringWithFormat:@"$%0.2f",CategoryPrice];
     cellFood.lblQuantityCategory.text = [NSString stringWithFormat:@"%d",QuantityCategory];
+    
     cellFood.QuantityCategory = QuantityCategory;
     cellFood.mydata = [Product_Food objectAtIndex:indexPath.row];
+    
     [cellFood.textLabel setTextColor:[UIColor greenColor]];
     cellFood.backgroundColor = [UIColor whiteColor];
     cellFood.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (cellFood.mydata.quantity ==0) {
+        cellFood.btnCong.hidden =cellFood.mydata.isBtn;
+        cellFood.btnTru.hidden =cellFood.mydata.isBtn;
+        cellFood.btnOder.hidden =!cellFood.mydata.isBtn;
+        cellFood.lblQuantityCategory.hidden =cellFood.mydata.isBtn;
+    }
+    if (cellFood.mydata.quantity >0) {
+        cellFood.btnCong.hidden =!cellFood.mydata.isBtn;
+        cellFood.btnTru.hidden =!cellFood.mydata.isBtn;
+        cellFood.btnOder.hidden =cellFood.mydata.isBtn;
+        cellFood.lblQuantityCategory.hidden =!cellFood.mydata.isBtn;
+    }
+    
+
     return cellFood;
 }
 #pragma mark - @optional
