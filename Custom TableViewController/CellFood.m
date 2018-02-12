@@ -25,25 +25,29 @@
     UIViewController *vController = [UIApplication sharedApplication].keyWindow.rootViewController;
     
     CGFloat naviHeight = vc.navigationController.navigationBar.frame.size.height;
-    _heightRow = (vController.view.frame.size.height -([UIApplication sharedApplication].statusBarFrame.size.height)- naviHeight)/4.75;
+    CGFloat ta3 = vc.tabBarController.tabBar.frame.size.height;
+
+    CGFloat height = (vController.view.frame.size.height -([UIApplication sharedApplication].statusBarFrame.size.height)- naviHeight- ta3);
+    CGFloat heightSection = height/20;
+    _heightRow = (height -heightSection)/4;
     _widthRow = vController.view.frame.size.width;
     float padding =_widthRow*1/35;
 #pragma mark - lbl
-    _lblNameCategoryVi = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow/3,padding,(_widthRow/1.48),(_heightRow/4)-padding)];
+    _lblNameCategoryVi = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow/2.5,padding,(_widthRow/1.48),(_heightRow/4)-padding)];
     _lblNameCategoryVi.backgroundColor = [UIColor clearColor];
     _lblNameCategoryVi.textAlignment = NSTextAlignmentLeft;
     _lblNameCategoryVi.font = [UIFont fontWithName:@"" size:14];
     _lblNameCategoryVi.textColor = [UIColor orangeColor];
     [self addSubview:_lblNameCategoryVi];
     
-    _lblNameCategoryKr = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow/3,_heightRow/4,(_widthRow/1.5),(_heightRow/4)-padding)];
+    _lblNameCategoryKr = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow/2.5,_heightRow/4,(_widthRow/1.5),(_heightRow/4)-padding)];
     _lblNameCategoryKr.backgroundColor = [UIColor clearColor];
     _lblNameCategoryKr.textAlignment = NSTextAlignmentLeft;
     _lblNameCategoryKr.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
     _lblNameCategoryKr.textColor = [UIColor grayColor];
     [self addSubview:_lblNameCategoryKr];
     
-    _lblPrice = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow/3,(_heightRow/2),(_widthRow/5.5),(_heightRow/4)-padding)];
+    _lblPrice = [[UILabel alloc] initWithFrame:CGRectMake(_widthRow/2.5,(_heightRow/2),(_widthRow/5.5),(_heightRow/4)-padding)];
     _lblPrice.backgroundColor = [UIColor clearColor];
     _lblPrice.textAlignment = NSTextAlignmentLeft;
     _lblPrice.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A481CD0203182310045AB95 /* HOT_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A481CCF203182310045AB95 /* HOT_ViewController.m */; };
+		4A481CFA2031AA720045AB95 /* FoodScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A481CF92031AA720045AB95 /* FoodScroll.m */; };
 		4A946166202AB019008BAA5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946165202AB019008BAA5E /* main.m */; };
 		4A946169202AB019008BAA5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946168202AB019008BAA5E /* AppDelegate.m */; };
 		4A94616F202AB019008BAA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A94616D202AB019008BAA5E /* Main.storyboard */; };
 		4A946171202AB019008BAA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A946170202AB019008BAA5E /* Assets.xcassets */; };
 		4A946174202AB019008BAA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A946172202AB019008BAA5E /* LaunchScreen.storyboard */; };
 		4A946197202AB0CA008BAA5E /* myData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946192202AB0CA008BAA5E /* myData.m */; };
-		4A946198202AB0CA008BAA5E /* Food_drinkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A946194202AB0CA008BAA5E /* Food_drinkTableViewController.m */; };
-		4A94619C202AB100008BAA5E /* Food_drink_hotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A94619B202AB100008BAA5E /* Food_drink_hotCell.m */; };
 		4A9461AB202B163C008BAA5E /* AMERICANO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */; };
 		4A9461AC202B163C008BAA5E /* CAPPUCINO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */; };
 		4A9461AD202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */; };
@@ -31,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A481CCE203182310045AB95 /* HOT_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOT_ViewController.h; sourceTree = "<group>"; };
+		4A481CCF203182310045AB95 /* HOT_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOT_ViewController.m; sourceTree = "<group>"; };
+		4A481CF82031AA720045AB95 /* FoodScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodScroll.h; sourceTree = "<group>"; };
+		4A481CF92031AA720045AB95 /* FoodScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodScroll.m; sourceTree = "<group>"; };
 		4A946161202AB019008BAA5E /* Custom TableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom TableViewController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A946165202AB019008BAA5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A946167202AB019008BAA5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,10 +45,6 @@
 		4A946175202AB019008BAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A946191202AB0CA008BAA5E /* myData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myData.h; sourceTree = "<group>"; };
 		4A946192202AB0CA008BAA5E /* myData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myData.m; sourceTree = "<group>"; };
-		4A946193202AB0CA008BAA5E /* Food_drinkTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food_drinkTableViewController.h; sourceTree = "<group>"; };
-		4A946194202AB0CA008BAA5E /* Food_drinkTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food_drinkTableViewController.m; sourceTree = "<group>"; };
-		4A94619A202AB100008BAA5E /* Food_drink_hotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food_drink_hotCell.h; sourceTree = "<group>"; };
-		4A94619B202AB100008BAA5E /* Food_drink_hotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food_drink_hotCell.m; sourceTree = "<group>"; };
 		4A9461A1202B163C008BAA5E /* AMERICANO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AMERICANO NÓNG.jpg"; sourceTree = "<group>"; };
 		4A9461A2202B163C008BAA5E /* CAPPUCINO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CAPPUCINO NÓNG.jpg"; sourceTree = "<group>"; };
 		4A9461A3202B163C008BAA5E /* CARAMEL MACHIATO NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "CARAMEL MACHIATO NÓNG.jpg"; sourceTree = "<group>"; };
@@ -144,10 +144,8 @@
 		4A94619F202AB19A008BAA5E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4A946193202AB0CA008BAA5E /* Food_drinkTableViewController.h */,
-				4A946194202AB0CA008BAA5E /* Food_drinkTableViewController.m */,
-				4A94619A202AB100008BAA5E /* Food_drink_hotCell.h */,
-				4A94619B202AB100008BAA5E /* Food_drink_hotCell.m */,
+				4A481CCE203182310045AB95 /* HOT_ViewController.h */,
+				4A481CCF203182310045AB95 /* HOT_ViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -168,6 +166,8 @@
 				4AE2ECB8203029920088FD36 /* FOOD_ViewController.m */,
 				4AE2ECB42030252F0088FD36 /* CellFood.h */,
 				4AE2ECB52030252F0088FD36 /* CellFood.m */,
+				4A481CF82031AA720045AB95 /* FoodScroll.h */,
+				4A481CF92031AA720045AB95 /* FoodScroll.m */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -255,13 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A481CD0203182310045AB95 /* HOT_ViewController.m in Sources */,
 				4A946169202AB019008BAA5E /* AppDelegate.m in Sources */,
 				4A946166202AB019008BAA5E /* main.m in Sources */,
 				4AE2ECB62030252F0088FD36 /* CellFood.m in Sources */,
 				4A946197202AB0CA008BAA5E /* myData.m in Sources */,
-				4A946198202AB0CA008BAA5E /* Food_drinkTableViewController.m in Sources */,
 				4AE2ECB9203029920088FD36 /* FOOD_ViewController.m in Sources */,
-				4A94619C202AB100008BAA5E /* Food_drink_hotCell.m in Sources */,
+				4A481CFA2031AA720045AB95 /* FoodScroll.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

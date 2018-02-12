@@ -1,37 +1,31 @@
 //
-//  Food_drinkTableViewController.m
-//  Core_TableVCtr
+//  HOT_ViewController.m
+//  Custom TableViewController
 //
-//  Created by Trúc Phương >_< on 02/02/2018.
+//  Created by Trúc Phương >_< on 12/02/2018.
 //  Copyright © 2018 iDev Bao. All rights reserved.
 //
 
-#import "Food_drinkTableViewController.h"
 
-@interface Food_drinkTableViewController ()
+#import "HOT_ViewController.h"
+
+@interface HOT_ViewController ()
+
 @end
 
-@implementation Food_drinkTableViewController
-Food_drink_hotCell*cell;
+@implementation HOT_ViewController
+UITableView * tableviewHOT;
+CellFood* cellHOT;
+NSMutableArray  * Product_HOT;
+float  result_HOT;
 
-NSMutableArray  * Product;
-float  result;
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-   }
--(void)loadView{
-    [super loadView];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     _mArrayProduct  = [NSMutableArray new];
     _mArrayCategoryMilk = [NSMutableArray new];
     _mArrayCategoryTea = [NSMutableArray new];
     _mArrayCategoryCoffee = [NSMutableArray new];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-
     myData * mydata = [[myData alloc] initmyDataNameVi:@"CAPPUCINO NÓNG" NameKr:@"Cappucino (Hot)"
                                                Product:@"Coffee" andPrice:10.5];
     myData * mydata1 =[[myData alloc] initmyDataNameVi:@"AMERICANO NÓNG" NameKr:@"Espresso (Hot)"
@@ -40,49 +34,39 @@ float  result;
                                                Product:@"Coffee" andPrice:18.5];
     myData * mydata3 =[[myData alloc] initmyDataNameVi:@"ESPRESSO SỮA NÓNG" NameKr:@"ESPRESSO (Hot)"
                                                Product:@"Coffee" andPrice:21.9];
-    
-    myData * mydata5 =[[myData alloc] initmyDataNameVi:@"MOCHA ĐÁ XAY" NameKr:@"Espresso, milk, socola" 
+    myData * mydata5 =[[myData alloc] initmyDataNameVi:@"MOCHA ĐÁ XAY" NameKr:@"Espresso, milk, socola"
                                                Product:@"MILK" andPrice:10];
+    myData * mydata6 =[[myData alloc] initmyDataNameVi:@"Chocolate" NameKr:@"Chocolate"
+                                               Product:@"MILK" andPrice:10.1];
     myData * mydata7 =[[myData alloc] initmyDataNameVi:@"LATTE ĐÁ" NameKr:@"LATTE"
                                                Product:@"MILK" andPrice:10.1];
-    
     myData * mydata10=[[myData alloc] initmyDataNameVi:@"TRÀ MATCHA LATTE NÓNG" NameKr:@"TEA (Hot)"
                                                Product:@"TEA" andPrice:10.99];
-    
     myData * mydata11=[[myData alloc] initmyDataNameVi:@"MATCHA MACCHIATO" NameKr:@"MACCHIATO"
                                                Product:@"TEA" andPrice:10.5];
-    
     myData * mydata12=[[myData alloc] initmyDataNameVi:@"TRÀ MATCHA LATTE ĐÁ" NameKr:@"MATCHA LATTE "
                                                Product:@"TEA" andPrice:10.9];
-    [_mArrayCategoryCoffee addObjectsFromArray:@[mydata,mydata1,mydata2,mydata3]];
-    [_mArrayCategoryMilk addObjectsFromArray:@[mydata5,mydata7]];
-    [_mArrayCategoryTea addObjectsFromArray:@[mydata10,mydata11,mydata12]];
-    [_mArrayProduct addObjectsFromArray:@[_mArrayCategoryTea ,_mArrayCategoryMilk,_mArrayCategoryCoffee]];
+    [_mArrayCategoryCoffee addObjectsFromArray:@[mydata,mydata1,mydata2,mydata3,mydata5,mydata6,mydata7,mydata10,mydata11,mydata12]];
+    [_mArrayProduct addObjectsFromArray:@[_mArrayCategoryCoffee]];
+    
+    tableviewHOT = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    tableviewHOT.dataSource = self;
+    tableviewHOT.delegate = self;
+    [self.view addSubview:tableviewHOT];
     
 #pragma mark -Autolayout:
     
-    UIButton * pay = [[UIButton alloc] initWithFrame:CGRectMake(0, 500, 50, 50)];
-    pay.backgroundColor = [UIColor orangeColor];
+    UIButton * pay = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2, 50, 50)];
+    [pay setImage:[UIImage imageNamed:@"pay.png"] forState:UIControlStateNormal];
+    
     [self.view addSubview:pay];
     [pay addTarget:self action:@selector(Pay:) forControlEvents:UIControlEventTouchDown];
-    //    pay.translatesAutoresizingMaskIntoConstraints = YES;
-    //    [pay.centerXAnchor constraintEqualToAnchor:self.tableView.centerXAnchor constant:0].active = YES;
-    //    [pay.centerYAnchor constraintEqualToAnchor:self.tableView.centerYAnchor constant:0].active = YES;
-    //    //        [pay.topAnchor constraintEqualToAnchor:self.navigationController.navigationBar.topAnchor constant:10].active = YES;
-    //            [pay.widthAnchor constraintEqualToAnchor:self.tableView.widthAnchor multiplier:0.5].active = YES;
-    //            [pay.heightAnchor constraintEqualToAnchor:self.tableView.widthAnchor multiplier:0.5].active = YES;
-    //
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    // Do any additional setup after loading the view.
 }
 
-// khi làm việc với tableview add vào vỉewCtr thì phải cho biết các hàm của <UITableViewDelegate, UITableViewDataSource> được dùng ở đâu. phải khai báo protocol cho vỉewCtr
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 #pragma mark - protocol tableview
 //  làm việc với 2 protocol UITableViewDelegate, UITableViewDataSource: data thì làm việc với dữ liệu  còn lại thì là tuỳ chỉnh custom cho tableview
 #pragma mark - Table view data source : numberOfSectionsInTableView? numberOfRowsInSection? section?
@@ -115,17 +99,17 @@ float  result;
     // cell = (Cell*)[tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     // Used by the delegate to acquire an already allocated cell, in lieu of allocating a new one. : return Cell có thể bị nil bắt buộc dùng if để tạo Style: Cell reuseIdentifier: đặc danh cho cell
     // Gọi cell bằng phương thức định danh nếu chưa có thì khởi tạo tránh tạo nhiều khi kéo thả tableview
-    cell = (Food_drink_hotCell*)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cellHOT = (CellFood*)[tableView dequeueReusableCellWithIdentifier:@"CellFood"];
     // va kiem tra da ton tai chua
-    Product =   [_mArrayProduct objectAtIndex:indexPath.section];
-    if (cell == nil) {// vung ton bo nho
-        cell =[[Food_drink_hotCell alloc]init_cell:self];
+    Product_HOT=   [_mArrayProduct objectAtIndex:indexPath.section];
+    if (cellHOT == nil) {// vung ton bo nho
+        cellHOT =[[CellFood alloc]init_cell:self];
     }
-    NSString * Category = ((myData*)[Product objectAtIndex:indexPath.row]).nameVi;
-    NSString * CategoryVi = ((myData*)[Product objectAtIndex:indexPath.row]).nameVi;
-    NSString * CategoryKr = ((myData*)[Product objectAtIndex:indexPath.row]).nameKr;
-    float  CategoryPrice = ((myData*)[Product objectAtIndex:indexPath.row]).price;
-    int QuantityCategory =  ((myData*)[Product objectAtIndex:indexPath.row]).quantity;
+    NSString * Category = ((myData*)[Product_HOT objectAtIndex:indexPath.row]).nameVi;
+    NSString * CategoryVi = ((myData*)[Product_HOT objectAtIndex:indexPath.row]).nameVi;
+    NSString * CategoryKr = ((myData*)[Product_HOT objectAtIndex:indexPath.row]).nameKr;
+    float  CategoryPrice = ((myData*)[Product_HOT objectAtIndex:indexPath.row]).price;
+    int QuantityCategory =  ((myData*)[Product_HOT objectAtIndex:indexPath.row]).quantity;
     //    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",Category]];
     //// paint img len context
     //    [cell.imageView.image drawInRect:CGRectMake(cell.imageView.frame.origin.x, cell.imageView.frame.origin.y, self.view.frame.size.width/2, self.tableView.rowHeight -2)];
@@ -133,27 +117,43 @@ float  result;
     //    UIGraphicsEndImageContext();
 #pragma  mark
     UIImage * imgCategory = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",Category]];
-    cell.imgViewCategory  = [cell.imgViewCategory initWithImage:imgCategory ];
+    cellHOT.imgViewCategory  = [cellHOT.imgViewCategory initWithImage:imgCategory ];
     
-    cell.lblNameCategoryVi.text = CategoryVi;
-    cell.lblNameCategoryKr.text = CategoryKr;
-    cell.lblPrice.text = [NSString stringWithFormat:@"%0.2f",CategoryPrice];
-    cell.lblQuantityCategory.text = [NSString stringWithFormat:@"%d",QuantityCategory];
-    cell.QuantityCategory = QuantityCategory;
-    cell.mydata = [Product objectAtIndex:indexPath.row];
-    [cell.textLabel setTextColor:[UIColor greenColor]];
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+    cellHOT.lblNameCategoryVi.text = CategoryVi;
+    cellHOT.lblNameCategoryKr.text = CategoryKr;
+    cellHOT.lblPrice.text = [NSString stringWithFormat:@"$%0.2f",CategoryPrice];
+    cellHOT.lblQuantityCategory.text = [NSString stringWithFormat:@"%d",QuantityCategory];
+    
+    cellHOT.QuantityCategory = QuantityCategory;
+    cellHOT.mydata = [Product_HOT objectAtIndex:indexPath.row];
+    
+    [cellHOT.textLabel setTextColor:[UIColor greenColor]];
+    cellHOT.backgroundColor = [UIColor whiteColor];
+    cellHOT.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (cellHOT.mydata.quantity ==0) {
+        cellHOT.btnCong.hidden =cellHOT.mydata.isBtn;
+        cellHOT.btnTru.hidden =cellHOT.mydata.isBtn;
+        cellHOT.btnOder.hidden =!cellHOT.mydata.isBtn;
+        cellHOT.lblQuantityCategory.hidden =cellHOT.mydata.isBtn;
+    }
+    if (cellHOT.mydata.quantity >0) {
+        cellHOT.btnCong.hidden =!cellHOT.mydata.isBtn;
+        cellHOT.btnTru.hidden =!cellHOT.mydata.isBtn;
+        cellHOT.btnOder.hidden =cellHOT.mydata.isBtn;
+        cellHOT.lblQuantityCategory.hidden =!cellHOT.mydata.isBtn;
+    }
+    
+    
+    return cellHOT;
 }
 #pragma mark - @optional
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
-
+    
+    
 }
 -(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-
-
+    
+    
 }
 
 -(void)Pay:(UIButton*)bt{
@@ -180,10 +180,10 @@ float  result;
                              for (int y = 0;y<item.count; y++ ) {
                                  myData *data = [item objectAtIndex:y];
                                  data.quantity = 0;
-                                 NSLog(@"%fssss",data.totals);
-                            }
+                                 
+                             }
                          }
-                        
+                         [tableviewHOT reloadData];
                          NSLog(@"thành tiền: %0.2f",s);
                      }];
         noButton = [UIAlertAction
@@ -202,7 +202,7 @@ float  result;
                     }];
     }
     UIAlertController * alertShow = [UIAlertController alertControllerWithTitle:@"The LADOcoffee" message:title preferredStyle:UIAlertControllerStyleActionSheet];
-
+    
     if (s > 0) {
         [alertShow addAction:yesButton];
         [alertShow addAction:noButton];
@@ -232,9 +232,18 @@ float  result;
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return cell.heightRow;
+    return cellHOT.heightRow;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    
+    CGFloat naviHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat ta3 = self.tabBarController.tabBar.frame.size.height;
+    
+    CGFloat heightSection = (self.view.frame.size.height -([UIApplication sharedApplication].statusBarFrame.size.height)- naviHeight- ta3)/20;
+    
+    return heightSection;
+}
 /*
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -272,3 +281,6 @@ float  result;
  */
 
 @end
+
+
+

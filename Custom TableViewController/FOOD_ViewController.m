@@ -10,6 +10,7 @@
 
 @interface FOOD_ViewController ()
 
+
 @end
 
 @implementation FOOD_ViewController
@@ -17,14 +18,19 @@ UITableView * tableview;
 CellFood* cellFood;
 NSMutableArray  * Product_Food;
 float  result_Food;
+UIView *viewPayShow;
+FoodScroll * foodScroll;
+UIScrollView * Vscroll;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     _mArrayProduct  = [NSMutableArray new];
     _mArrayCategoryMilk = [NSMutableArray new];
     _mArrayCategoryTea = [NSMutableArray new];
     _mArrayCategoryCoffee = [NSMutableArray new];
+
     myData * mydata = [[myData alloc] initmyDataNameVi:@"CAPPUCINO NÓNG" NameKr:@"Cappucino (Hot)"
                                                Product:@"Coffee" andPrice:10.5];
     myData * mydata1 =[[myData alloc] initmyDataNameVi:@"AMERICANO NÓNG" NameKr:@"Espresso (Hot)"
@@ -55,21 +61,29 @@ float  result_Food;
     [_mArrayCategoryTea addObjectsFromArray:@[mydata10,mydata11,mydata12]];
     [_mArrayProduct addObjectsFromArray:@[_mArrayCategoryTea ,_mArrayCategoryMilk,_mArrayCategoryCoffee]];
 
-    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, self.view.frame.size.height)];
     tableview.dataSource = self;
     tableview.delegate = self;
     [self.view addSubview:tableview];
-    
-#pragma mark -Autolayout:
+
+#pragma mark -foodScroll:
+
+    foodScroll = [[FoodScroll alloc]initFoodScroll:10 withHeight:self.view.frame.size.height/6  andWidth:self.view.frame.size.width];
+    [self.view addSubview:foodScroll];
+#pragma mark -pay:
     
     UIButton * pay = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height/2, 50, 50)];
     [pay setImage:[UIImage imageNamed:@"pay.png"] forState:UIControlStateNormal];
 
     [self.view addSubview:pay];
     [pay addTarget:self action:@selector(Pay:) forControlEvents:UIControlEventTouchDown];
-
-    
-    // Do any additional setup after loading the view.
+#pragma mark -payShow:
+    viewPayShow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width)];
+    viewPayShow.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+    viewPayShow.backgroundColor = [UIColor whiteColor];
+    viewPayShow.alpha = 0.5;
+    viewPayShow.hidden = YES;
+    [self.view addSubview:viewPayShow];
 }
 
 
@@ -189,7 +203,7 @@ float  result_Food;
                                 
                              }
                          }
-                         
+                         [tableview reloadData];
                          NSLog(@"thành tiền: %0.2f",s);
                      }];
         noButton = [UIAlertAction
@@ -198,6 +212,7 @@ float  result_Food;
                     handler:^(UIAlertAction * action) {
                     }];
         title = [NSString stringWithFormat:@"Bạn muốn thanh toán: $%0.2f",s];
+        viewPayShow.hidden= NO;
     }
     if (s==0){
         title =@"Bạn chưa Oder vui lòng chọn món!";
@@ -207,16 +222,16 @@ float  result_Food;
                     handler:^(UIAlertAction * action) {
                     }];
     }
-    UIAlertController * alertShow = [UIAlertController alertControllerWithTitle:@"The LADOcoffee" message:title preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    if (s > 0) {
-        [alertShow addAction:yesButton];
-        [alertShow addAction:noButton];
-    }
-    if (s==0) {
-        [alertShow addAction:noButton];
-    }
-    [self presentViewController:alertShow animated:YES completion:nil];
+//    UIAlertController * alertShow = [UIAlertController alertControllerWithTitle:@"The LADOcoffee" message:title preferredStyle:UIAlertControllerStyleActionSheet];
+//    
+//    if (s > 0) {
+//        [alertShow addAction:yesButton];
+//        [alertShow addAction:noButton];
+//    }
+//    if (s==0) {
+//        [alertShow addAction:noButton];
+//    }
+//    [self presentViewController:alertShow animated:YES completion:nil];
 }
 
 // Override to support conditional editing of the table view.
@@ -229,6 +244,7 @@ float  result_Food;
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSMutableArray * row_ofSection = [_mArrayProduct objectAtIndex:section];
     return ((myData*)[row_ofSection objectAtIndex:section]).product;
+
 }
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
     view.tintColor = [UIColor brownColor];
@@ -240,7 +256,16 @@ float  result_Food;
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return cellFood.heightRow;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
+    
+    CGFloat naviHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat ta3 = self.tabBarController.tabBar.frame.size.height;
+    
+    CGFloat heightSection = (self.view.frame.size.height -([UIApplication sharedApplication].statusBarFrame.size.height)- naviHeight- ta3)/20;
+    
+    return heightSection;
+}
 /*
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

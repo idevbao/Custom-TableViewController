@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController * HOT = [[UINavigationController alloc] initWithRootViewController:[Food_drinkTableViewController new]];
+    UINavigationController * HOT = [[UINavigationController alloc] initWithRootViewController:[HOT_ViewController new]];
     [HOT.tabBarItem setTitle:@"HOT"];
     
 //  set img va selecte
