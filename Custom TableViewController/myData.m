@@ -15,6 +15,7 @@
     _price = price;
     _product = product;
     _quantity = 0;
+    _isBtn = YES;
     return self;
 }
 

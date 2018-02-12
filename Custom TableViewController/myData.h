@@ -15,6 +15,7 @@
 @property(nonatomic, assign) float price;
 @property(nonatomic, assign) int quantity;
 @property(nonatomic,assign) float totals;
+@property(nonatomic,assign) BOOL isBtn;
 
 -(instancetype)initmyDataNameVi:(NSString *)nameVi NameKr:(NSString *)nameKr Product:(NSString*)product andPrice:(float)pric;
 

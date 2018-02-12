@@ -75,21 +75,21 @@
     //    btn add
     _btnOder= [[UIButton alloc]initWithFrame:CGRectMake(_widthRow*9/10,_heightRow/2,_widthRow/15,(_widthRow/16)) ];
     _btnOder.backgroundColor = [UIColor orangeColor];
-    _btnOder.hidden = NO;
+//    _btnOder.hidden = NO;
     [_btnOder setTitle:@"+" forState:UIControlStateNormal];
     [self addSubview:_btnOder];
     [_btnOder addTarget:self action:@selector(setBTAdd:) forControlEvents:UIControlEventTouchDown];
     //    btn -
     _btnTru= [[UIButton alloc]initWithFrame:CGRectMake(_widthRow*7.5/10,_heightRow/2,_widthRow/15,(_widthRow/16)) ];
     _btnTru.backgroundColor = [UIColor orangeColor];
-    _btnTru.hidden = YES;
+//    _btnTru.hidden = YES;
     [_btnTru setTitle:@"-" forState:UIControlStateNormal];
     [self addSubview:_btnTru];
     [_btnTru addTarget:self action:@selector(setBTNTru:) forControlEvents:UIControlEventTouchUpInside];
     //btn +
     _btnCong= [[UIButton alloc]initWithFrame:CGRectMake(_widthRow*9/10,_heightRow/2,_widthRow/15,(_widthRow/16))];
     _btnCong.backgroundColor = [UIColor orangeColor];
-    _btnCong.hidden =YES;
+//    _btnCong.hidden =YES;
     [_btnCong setTitle:@"+" forState:UIControlStateNormal];
     [self addSubview:_btnCong];
     [_btnCong addTarget:self action:@selector(setBTNCong:) forControlEvents:UIControlEventTouchDown];
