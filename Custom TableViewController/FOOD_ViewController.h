@@ -10,9 +10,8 @@
 #import "myData.h"
 #import "CellFood.h"
 #import "FoodScroll.h"
-@interface FOOD_ViewController : UIViewController< UITableViewDelegate, UITableViewDataSource>
-@property(nonatomic,strong)NSMutableArray* mArrayCategoryMilk;
-@property(nonatomic,strong)NSMutableArray* mArrayCategoryTea;
-@property(nonatomic,strong)NSMutableArray* mArrayCategoryCoffee;
-@property(nonatomic,strong)NSMutableArray* mArrayProduct;
+#import "DataManager.h"
+@interface FOOD_ViewController : UIViewController< UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
+
+@property(nonatomic,assign)CGFloat heightFood;
 @end

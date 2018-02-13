@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "myData.h"
 #import "CellFood.h"
+#import "DataManagerHot.h"
 
 @interface HOT_ViewController : UIViewController< UITableViewDelegate, UITableViewDataSource>
 
-@property(nonatomic,strong)NSMutableArray* mArrayCategoryMilk;
-@property(nonatomic,strong)NSMutableArray* mArrayCategoryTea;
-@property(nonatomic,strong)NSMutableArray* mArrayCategoryCoffee;
-@property(nonatomic,strong)NSMutableArray* mArrayProduct;
 
 @end

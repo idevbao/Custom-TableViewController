@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HOT_ViewController.h"
 #import "FOOD_ViewController.h"
+#import "DataManager.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

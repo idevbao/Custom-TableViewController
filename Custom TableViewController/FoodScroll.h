@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FoodScroll : UIScrollView
--(instancetype)initFoodScroll:(int)numberView withHeight:(float)height andWidth:(float)width;
+-(instancetype)initFoodScroll:(int)numberView withHeight:(float)height andWidth:(float)width view:(UIViewController*)viewctr;
 @end

@@ -18,37 +18,16 @@ UITableView * tableviewHOT;
 CellFood* cellHOT;
 NSMutableArray  * Product_HOT;
 float  result_HOT;
-
+DataManagerHot *dataManagerHot;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _mArrayProduct  = [NSMutableArray new];
-    _mArrayCategoryMilk = [NSMutableArray new];
-    _mArrayCategoryTea = [NSMutableArray new];
-    _mArrayCategoryCoffee = [NSMutableArray new];
-    myData * mydata = [[myData alloc] initmyDataNameVi:@"CAPPUCINO NÓNG" NameKr:@"Cappucino (Hot)"
-                                               Product:@"Coffee" andPrice:10.5];
-    myData * mydata1 =[[myData alloc] initmyDataNameVi:@"AMERICANO NÓNG" NameKr:@"Espresso (Hot)"
-                                               Product:@"Coffee" andPrice:8.9];
-    myData * mydata2 =[[myData alloc] initmyDataNameVi:@"CARAMEL MACHIATO NÓNG" NameKr:@"Espresso, milk, caramel"
-                                               Product:@"Coffee" andPrice:18.5];
-    myData * mydata3 =[[myData alloc] initmyDataNameVi:@"ESPRESSO SỮA NÓNG" NameKr:@"ESPRESSO (Hot)"
-                                               Product:@"Coffee" andPrice:21.9];
-    myData * mydata5 =[[myData alloc] initmyDataNameVi:@"MOCHA ĐÁ XAY" NameKr:@"Espresso, milk, socola"
-                                               Product:@"MILK" andPrice:10];
-    myData * mydata6 =[[myData alloc] initmyDataNameVi:@"Chocolate" NameKr:@"Chocolate"
-                                               Product:@"MILK" andPrice:10.1];
-    myData * mydata7 =[[myData alloc] initmyDataNameVi:@"LATTE ĐÁ" NameKr:@"LATTE"
-                                               Product:@"MILK" andPrice:10.1];
-    myData * mydata10=[[myData alloc] initmyDataNameVi:@"TRÀ MATCHA LATTE NÓNG" NameKr:@"TEA (Hot)"
-                                               Product:@"TEA" andPrice:10.99];
-    myData * mydata11=[[myData alloc] initmyDataNameVi:@"MATCHA MACCHIATO" NameKr:@"MACCHIATO"
-                                               Product:@"TEA" andPrice:10.5];
-    myData * mydata12=[[myData alloc] initmyDataNameVi:@"TRÀ MATCHA LATTE ĐÁ" NameKr:@"MATCHA LATTE "
-                                               Product:@"TEA" andPrice:10.9];
-    [_mArrayCategoryCoffee addObjectsFromArray:@[mydata,mydata1,mydata2,mydata3,mydata5,mydata6,mydata7,mydata10,mydata11,mydata12]];
-    [_mArrayProduct addObjectsFromArray:@[_mArrayCategoryCoffee]];
+    self.navigationController.navigationBar.barTintColor=[UIColor orangeColor];
     
+#pragma mark DataManager
+    dataManagerHot = [DataManagerHot getData];
+    
+#pragma mark Tableview
     tableviewHOT = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     tableviewHOT.dataSource = self;
     tableviewHOT.delegate = self;
@@ -73,11 +52,11 @@ float  result_HOT;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //#warning Incomplete implementation, return the number of sections
-    return (int)_mArrayProduct.count;
+    return (int)dataManagerHot.mArrayProduct.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //#warning Incomplete implementation, return the number of rows
-    NSMutableArray  * row_ofSection =  [_mArrayProduct objectAtIndex:section];
+    NSMutableArray  * row_ofSection =  [dataManagerHot.mArrayProduct objectAtIndex:section];
     return row_ofSection.count;
 }
 
@@ -101,7 +80,7 @@ float  result_HOT;
     // Gọi cell bằng phương thức định danh nếu chưa có thì khởi tạo tránh tạo nhiều khi kéo thả tableview
     cellHOT = (CellFood*)[tableView dequeueReusableCellWithIdentifier:@"CellFood"];
     // va kiem tra da ton tai chua
-    Product_HOT=   [_mArrayProduct objectAtIndex:indexPath.section];
+    Product_HOT=   [dataManagerHot.mArrayProduct objectAtIndex:indexPath.section];
     if (cellHOT == nil) {// vung ton bo nho
         cellHOT =[[CellFood alloc]init_cell:self];
     }
@@ -161,8 +140,8 @@ float  result_HOT;
     NSString * title = @"";
     UIAlertAction* yesButton;
     UIAlertAction* noButton;
-    for (int  i=0; i<_mArrayProduct.count; i++  ) {
-        NSMutableArray * item = [_mArrayProduct objectAtIndex:i];
+    for (int  i=0; i<dataManagerHot.mArrayProduct.count; i++  ) {
+        NSMutableArray * item = [dataManagerHot.mArrayProduct objectAtIndex:i];
         for (int y = 0;y<item.count; y++ ) {
             myData *data = [item objectAtIndex:y];
             data.totals = data.quantity* data.price;
@@ -175,8 +154,8 @@ float  result_HOT;
                      actionWithTitle:@"Thanh toán!"
                      style:UIAlertActionStyleDestructive
                      handler:^(UIAlertAction * action) {
-                         for (int  i=0; i<_mArrayProduct.count; i++  ) {
-                             NSMutableArray * item = [_mArrayProduct objectAtIndex:i];
+                         for (int  i=0; i<dataManagerHot.mArrayProduct.count; i++  ) {
+                             NSMutableArray * item = [dataManagerHot.mArrayProduct objectAtIndex:i];
                              for (int y = 0;y<item.count; y++ ) {
                                  myData *data = [item objectAtIndex:y];
                                  data.quantity = 0;
@@ -221,12 +200,12 @@ float  result_HOT;
 
 #pragma mark  Display customization
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    NSMutableArray * row_ofSection = [_mArrayProduct objectAtIndex:section];
+    NSMutableArray * row_ofSection = [dataManagerHot.mArrayProduct objectAtIndex:section];
     return ((myData*)[row_ofSection objectAtIndex:section]).product;
 }
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
-    view.tintColor = [UIColor brownColor];
-    [((UITableViewHeaderFooterView *)view).textLabel setTextColor:[UIColor whiteColor]];
+
+    [((UITableViewHeaderFooterView *)view).textLabel setTextColor:[UIColor blackColor]];
 }
 -(void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section{
     

@@ -25,6 +25,8 @@
 		4A9461B2202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */; };
 		4A9461B3202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */; };
 		4A9461B4202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */; };
+		4ABA71172032F56F003FA92D /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABA71162032F56F003FA92D /* DataManager.m */; };
+		4ABA711A2032FDA3003FA92D /* DataManagerHot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABA71192032FDA3003FA92D /* DataManagerHot.m */; };
 		4AE2ECB62030252F0088FD36 /* CellFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2ECB52030252F0088FD36 /* CellFood.m */; };
 		4AE2ECB9203029920088FD36 /* FOOD_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2ECB8203029920088FD36 /* FOOD_ViewController.m */; };
 		4AE2ECBB20302F9B0088FD36 /* pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2ECBA20302F9B0088FD36 /* pay.png */; };
@@ -55,6 +57,10 @@
 		4A9461A8202B163C008BAA5E /* MOCHA ĐÁ XAY.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MOCHA ĐÁ XAY.jpg"; sourceTree = "<group>"; };
 		4A9461A9202B163C008BAA5E /* TRÀ MATCHA LATTE ĐÁ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRÀ MATCHA LATTE ĐÁ.jpg"; sourceTree = "<group>"; };
 		4A9461AA202B163C008BAA5E /* TRÀ MATCHA LATTE NÓNG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TRÀ MATCHA LATTE NÓNG.jpg"; sourceTree = "<group>"; };
+		4ABA71152032F56F003FA92D /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		4ABA71162032F56F003FA92D /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		4ABA71182032FDA3003FA92D /* DataManagerHot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManagerHot.h; sourceTree = "<group>"; };
+		4ABA71192032FDA3003FA92D /* DataManagerHot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManagerHot.m; sourceTree = "<group>"; };
 		4AE2ECB42030252F0088FD36 /* CellFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFood.h; sourceTree = "<group>"; };
 		4AE2ECB52030252F0088FD36 /* CellFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFood.m; sourceTree = "<group>"; };
 		4AE2ECB7203029920088FD36 /* FOOD_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOOD_ViewController.h; sourceTree = "<group>"; };
@@ -155,6 +161,10 @@
 			children = (
 				4A946191202AB0CA008BAA5E /* myData.h */,
 				4A946192202AB0CA008BAA5E /* myData.m */,
+				4ABA71162032F56F003FA92D /* DataManager.m */,
+				4ABA71152032F56F003FA92D /* DataManager.h */,
+				4ABA71182032FDA3003FA92D /* DataManagerHot.h */,
+				4ABA71192032FDA3003FA92D /* DataManagerHot.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -260,6 +270,8 @@
 				4A946166202AB019008BAA5E /* main.m in Sources */,
 				4AE2ECB62030252F0088FD36 /* CellFood.m in Sources */,
 				4A946197202AB0CA008BAA5E /* myData.m in Sources */,
+				4ABA711A2032FDA3003FA92D /* DataManagerHot.m in Sources */,
+				4ABA71172032F56F003FA92D /* DataManager.m in Sources */,
 				4AE2ECB9203029920088FD36 /* FOOD_ViewController.m in Sources */,
 				4A481CFA2031AA720045AB95 /* FoodScroll.m in Sources */,
 			);

@@ -17,17 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+
+    
+    
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UINavigationController * HOT = [[UINavigationController alloc] initWithRootViewController:[HOT_ViewController new]];
+
     [HOT.tabBarItem setTitle:@"HOT"];
     
-//  set img va selecte
+    //  set img va selecte
     UINavigationController * Food = [[UINavigationController alloc] initWithRootViewController:[FOOD_ViewController new]];
     [Food.tabBarItem setTitle:@"FOOD"];
 
     _window.rootViewController = Food;
     UITabBarController *tabBar = [UITabBarController new];
     tabBar.viewControllers = @[HOT,Food];
+    tabBar.tabBar.barTintColor = [UIColor orangeColor];
+    
     self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     return YES;
